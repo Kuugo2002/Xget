@@ -152,7 +152,7 @@
 
 ### 生態系統整合
 
-- **專用瀏覽器擴充功能**：[Xget Now](https://github.com/xixu-me/Xget-Now)
+- **專用瀏覽器擴充功能**：[Xget Now](https://github.com/Kuugo2002/Xget-Now)
   提供無縫體驗
   - 自動 URL 轉址，無需手動修改 URL
   - 支援自訂 Xget 實例網域
@@ -2533,7 +2533,7 @@ client = OpenAI(
 
 ### 部署到 Cloudflare Workers
 
-1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **獲取 Cloudflare 憑證**：
    - 存取[帳戶 API 權杖](https://dash.cloudflare.com/?to=/:account/api-tokens)建立並記錄 API 權杖，使用「編輯 Cloudflare
@@ -2557,7 +2557,7 @@ client = OpenAI(
 
 ### 部署到 Cloudflare Pages
 
-1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **獲取 Cloudflare 憑證**：
    - 存取[帳戶 API 權杖](https://dash.cloudflare.com/?to=/:account/api-tokens)建立並記錄 API 權杖，使用「編輯 Cloudflare
@@ -2585,7 +2585,7 @@ client = OpenAI(
 
 ### 部署到 EdgeOne Pages
 
-1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **獲取 EdgeOne Pages API Token**：
    - 存取[中國站 EdgeOne 控制台](https://console.cloud.tencent.com/edgeone/pages?tab=api)或[國際站 EdgeOne 控制台](https://console.tencentcloud.com/edgeone/pages?tab=api)建立並記錄 API
@@ -2609,7 +2609,7 @@ client = OpenAI(
 
 ### 部署到 Vercel
 
-1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **獲取 Vercel 憑證**：
    - 存取 [Vercel Account Settings](https://vercel.com/account/settings/tokens)
@@ -2638,7 +2638,7 @@ client = OpenAI(
 
 ### 部署到 Netlify
 
-1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **獲取 Netlify 憑證**：
    - 存取 [Netlify User Settings](https://app.netlify.com/user/applications)
@@ -2665,7 +2665,7 @@ client = OpenAI(
 
 ### 部署到 Deno Deploy
 
-1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+1. **fork 本儲存庫**：[Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **切換預設分支**：
    - 進入您的 GitHub 儲存庫 → Settings → General → Default branch
@@ -2723,7 +2723,7 @@ podman run -d \
 
 ```bash
 # 克隆儲存庫
-git clone https://github.com/xixu-me/Xget.git
+git clone https://github.com/Kuugo2002/Xget.git
 cd Xget
 
 # 建置鏡像
@@ -2740,7 +2740,7 @@ docker run -d \
 
 ```bash
 # 克隆儲存庫
-git clone https://github.com/xixu-me/Xget.git
+git clone https://github.com/Kuugo2002/Xget.git
 cd Xget
 
 # 建置鏡像
@@ -2842,7 +2842,7 @@ const PLATFORM_PATH_TRANSFORMERS = {
 1. **儲存庫設定**
 
    ```bash
-   git clone https://github.com/xixu-me/Xget.git
+   git clone https://github.com/Kuugo2002/Xget.git
    cd Xget
    npm install
    npx wrangler login  # 首次使用
@@ -2941,7 +2941,7 @@ npx wrangler dev --log-level debug
 你可以透過以下方式參與：
 
 1. **報告問題**: 使用
-   [issue 範本](https://github.com/xixu-me/Xget/issues/new/choose)回報 bug 或提出功能請求。
+   [issue 範本](https://github.com/Kuugo2002/Xget/issues/new/choose)回報 bug 或提出功能請求。
 2. **提交程式碼**: fork 儲存庫，建立功能分支並提交 pull request。
 3. **改進文件**: 修正錯誤、新增範例、完善說明。
 4. **測試回饋**: 在不同環境下測試並分享結果。

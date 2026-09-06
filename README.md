@@ -186,7 +186,7 @@ supported platform URL to Xget's acceleration format with one click
 ### Ecosystem Integration
 
 - **Dedicated Browser Extension**:
-  [Xget Now](https://github.com/xixu-me/Xget-Now) provides seamless experience
+  [Xget Now](https://github.com/Kuugo2002/Xget-Now) provides seamless experience
   - Automatic URL redirection, no manual URL modification needed
   - Support for custom Xget instance domains
   - Multi-platform preference settings and blacklist/whitelist management
@@ -2575,7 +2575,7 @@ client = OpenAI(
 ### Deploy to Cloudflare Workers
 
 1. **Fork this repository**:
-   [Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+   [Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **Get Cloudflare credentials**:
    - Visit
@@ -2604,7 +2604,7 @@ client = OpenAI(
 ### Deploy to Cloudflare Pages
 
 1. **Fork this repository**:
-   [Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+   [Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **Get Cloudflare credentials**:
    - Visit
@@ -2640,7 +2640,7 @@ workflow.
 ### Deploy to EdgeOne Pages
 
 1. **Fork this repository**:
-   [Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+   [Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **Get EdgeOne Pages API Token**:
    - Visit
@@ -2673,7 +2673,7 @@ workflow.
 ### Deploy to Vercel
 
 1. **Fork this repository**:
-   [Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+   [Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **Get Vercel credentials**:
    - Visit [Vercel Account Settings](https://vercel.com/account/settings/tokens)
@@ -2708,7 +2708,7 @@ the sync workflow.
 ### Deploy to Netlify
 
 1. **Fork this repository**:
-   [Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+   [Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **Get Netlify credentials**:
    - Visit [Netlify User Settings](https://app.netlify.com/user/applications) to
@@ -2741,7 +2741,7 @@ the sync workflow.
 ### Deploy to Deno Deploy
 
 1. **Fork this repository**:
-   [Fork xixu-me/Xget](https://github.com/xixu-me/Xget/fork)
+   [Fork xixu-me/Xget](https://github.com/Kuugo2002/Xget/fork)
 
 2. **Switch default branch**:
    - Go to your GitHub repository → Settings → General → Default branch
@@ -2804,7 +2804,7 @@ Build the container image from source:
 
 ```bash
 # Clone the repository
-git clone https://github.com/xixu-me/Xget.git
+git clone https://github.com/Kuugo2002/Xget.git
 cd Xget
 
 # Build the image
@@ -2821,7 +2821,7 @@ docker run -d \
 
 ```bash
 # Clone the repository
-git clone https://github.com/xixu-me/Xget.git
+git clone https://github.com/Kuugo2002/Xget.git
 cd Xget
 
 # Build the image
@@ -2931,7 +2931,7 @@ const PLATFORM_PATH_TRANSFORMERS = {
 1. **Repository Setup**
 
    ```bash
-   git clone https://github.com/xixu-me/Xget.git
+   git clone https://github.com/Kuugo2002/Xget.git
    cd Xget
    npm install
    npx wrangler login  # First time use
@@ -3076,7 +3076,7 @@ need the full collaboration and maintenance context:
 You can help by:
 
 1. **Report Issues**: Use
-   [issue templates](https://github.com/xixu-me/Xget/issues/new/choose) to
+   [issue templates](https://github.com/Kuugo2002/Xget/issues/new/choose) to
    report bugs or propose feature requests.
 2. **Submit Code**: Fork the repository, create a feature branch, and open a
    pull request.

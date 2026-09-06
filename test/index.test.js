@@ -6,30 +6,30 @@ describe('Xget Core Functionality', () => {
     it('should redirect root path to homepage', async () => {
       const response = await SELF.fetch('https://example.com/', { redirect: 'manual' });
       expect(response.status).toBe(302);
-      expect(response.headers.get('Location')).toBe('https://github.com/xixu-me/Xget');
+      expect(response.headers.get('Location')).toBe('https://github.com/Kuugo2002/Xget');
     });
 
     it('should redirect platform prefix without path to homepage', async () => {
       // Test with /gh (no trailing slash)
       const response1 = await SELF.fetch('https://example.com/gh', { redirect: 'manual' });
       expect(response1.status).toBe(302);
-      expect(response1.headers.get('Location')).toBe('https://github.com/xixu-me/Xget');
+      expect(response1.headers.get('Location')).toBe('https://github.com/Kuugo2002/Xget');
 
       // Test with /gh/ (with trailing slash)
       const response2 = await SELF.fetch('https://example.com/gh/', { redirect: 'manual' });
       expect(response2.status).toBe(302);
-      expect(response2.headers.get('Location')).toBe('https://github.com/xixu-me/Xget');
+      expect(response2.headers.get('Location')).toBe('https://github.com/Kuugo2002/Xget');
 
       // Test with multi-part platform prefix (e.g., /ip/openai)
       const response3 = await SELF.fetch('https://example.com/ip/openai', { redirect: 'manual' });
       expect(response3.status).toBe(302);
-      expect(response3.headers.get('Location')).toBe('https://github.com/xixu-me/Xget');
+      expect(response3.headers.get('Location')).toBe('https://github.com/Kuugo2002/Xget');
     });
 
     it('should redirect invalid platform prefix to homepage', async () => {
       const response = await SELF.fetch('https://example.com/invalid/test', { redirect: 'manual' });
       expect(response.status).toBe(302);
-      expect(response.headers.get('Location')).toBe('https://github.com/xixu-me/Xget');
+      expect(response.headers.get('Location')).toBe('https://github.com/Kuugo2002/Xget');
     });
 
     it('should include security headers in all responses', async () => {
