@@ -2774,26 +2774,26 @@ Pull and run the pre-built image from GitHub Container Registry:
 
 ```bash
 # Pull the latest image
-docker pull ghcr.io/xixu-me/xget:latest
+docker pull ghcr.io/kuugo2002/xget:latest
 
 # Run the container
 docker run -d \
   --name xget \
   -p 8080:8080 \
-  ghcr.io/xixu-me/xget:latest
+  ghcr.io/kuugo2002/xget:latest
 ```
 
 **Using Podman:**
 
 ```bash
 # Pull the latest image
-podman pull ghcr.io/xixu-me/xget:latest
+podman pull ghcr.io/kuugo2002/xget:latest
 
 # Run the container
 podman run -d \
   --name xget \
   -p 8080:8080 \
-  ghcr.io/xixu-me/xget:latest
+  ghcr.io/kuugo2002/xget:latest
 ```
 
 #### Building Locally
@@ -2843,7 +2843,7 @@ version: '3.8'
 
 services:
   xget:
-    image: ghcr.io/xixu-me/xget:latest
+    image: ghcr.io/kuugo2002/xget:latest
     container_name: xget
     ports:
       - '8080:8080'

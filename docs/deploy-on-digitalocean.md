@@ -87,7 +87,7 @@ manage the container via Docker Compose.
 
    services:
      xget:
-       image: ghcr.io/xixu-me/xget:latest
+       image: ghcr.io/kuugo2002/xget:latest
        container_name: xget
        # Bind only to 127.0.0.1; expose via reverse proxy
        ports:
@@ -186,7 +186,7 @@ don’t want to manage servers.
 1. **Prepare the container image**
 
    Two common options:
-   - Use the official image: `ghcr.io/xixu-me/xget:latest`
+   - Use the official image: `ghcr.io/kuugo2002/xget:latest`
    - Or mirror/rebuild Xget into DOCR if you want a private registry or faster
      internal pulls.
 
@@ -196,7 +196,7 @@ don’t want to manage servers.
    - Create new App → choose "Container".
    - Source:
      - DigitalOcean Container Registry _or_
-     - an external image (`ghcr.io/xixu-me/xget:latest`).
+     - an external image (`ghcr.io/kuugo2002/xget:latest`).
 
    - Set the internal listening port to `8080`.
 
@@ -250,7 +250,7 @@ spec:
     spec:
       containers:
         - name: xget
-          image: ghcr.io/xixu-me/xget:latest
+          image: ghcr.io/kuugo2002/xget:latest
           ports:
             - containerPort: 8080
           resources:
