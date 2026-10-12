@@ -9,6 +9,7 @@
  */
 
 import { handleDockerAuth } from '../protocols/docker.js';
+import { handlePublicUrlProxy, isPublicUrlProxyPath } from '../proxy/public-url.js';
 import { finalizeResponse } from '../response/finalize-response.js';
 import {
   createHomepageRedirect,
@@ -39,11 +40,13 @@ export async function handleRequest(request, env, ctx) {
   try {
     if (isCorsPreflight) {
       const requestedMethod = request.headers.get('Access-Control-Request-Method') || '';
-      const allowedMethods = getAllowedMethods(
-        new Request(request.url, { method: requestedMethod || 'GET' }),
-        url,
-        config
-      );
+      const allowedMethods = isPublicUrlProxyPath(url.pathname)
+        ? ['GET', 'HEAD']
+        : getAllowedMethods(
+            new Request(request.url, { method: requestedMethod || 'GET' }),
+            url,
+            config
+          );
 
       if (!allowedMethods.includes(requestedMethod)) {
         response = createErrorResponse('Method not allowed', 405);
@@ -72,6 +75,15 @@ export async function handleRequest(request, env, ctx) {
     // Redirect root path or invalid platforms to GitHub repository
     else if (url.pathname === '/' || url.pathname === '') {
       response = createHomepageRedirect();
+    } else if (isPublicUrlProxyPath(url.pathname)) {
+      response = await handlePublicUrlProxy({
+        config,
+        ctx,
+        monitor,
+        request,
+        requestContext,
+        url
+      });
     } else {
       const validation = validateRequest(request, url, config, requestContext);
       if (!validation.valid) {

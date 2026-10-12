@@ -293,6 +293,20 @@ classDiagram
 
 ## URL Conversion Rules
 
+### Generic Public Direct-Link Proxy
+
+Percent-encode the complete HTTP(S) file URL with `encodeURIComponent`, then
+append it to `/proxy/`:
+
+```text
+https://xget.xi-xu.me/proxy/https%3A%2F%2Fexample.com%2Ffile.zip
+```
+
+The proxy only accepts `GET` and `HEAD`. Query strings must be included in the
+encoded target URL. Client credentials are not forwarded, private or reserved
+network targets and non-standard ports are rejected, and every redirect is
+validated before it is followed.
+
 Using the pre-deployed instance **`xget.xi-xu.me`** or your own deployed
 instance, simply replace the domain and add the platform prefix:
 

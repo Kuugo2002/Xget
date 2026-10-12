@@ -257,6 +257,25 @@ classDiagram
 
 ## URL 转换规则
 
+### 通用公开直链代理
+
+将完整的 HTTP(S) 文件 URL 使用 `encodeURIComponent` 进行百分号编码，然后放在
+`/proxy/` 后：
+
+```text
+https://xget.xi-xu.me/proxy/https%3A%2F%2Fexample.com%2Ffile.zip
+```
+
+带查询参数时必须将查询字符串一起编码：
+
+```js
+const source = 'https://example.com/file.zip?token=public-value';
+const proxied = `https://xget.xi-xu.me/proxy/${encodeURIComponent(source)}`;
+```
+
+> [!IMPORTANT] 该功能仅支持 `GET` 和 `HEAD`
+> 公开直链。不会转发 Cookie、Authorization、Referer 等客户端凭据；不允许本机、私网、保留 IP、URL 内嵌凭据或非标准端口。上游跳转最多跟随 5 次，且每次跳转都会重新执行目标安全检查。
+
 使用预部署实例 **`xget.xi-xu.me`**
 或你自己部署的实例，只需简单替换域名并添加平台前缀：
 

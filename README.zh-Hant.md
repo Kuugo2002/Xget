@@ -258,6 +258,18 @@ classDiagram
 
 ## URL 轉換規則
 
+### 通用公開直鏈代理
+
+將完整的 HTTP(S) 檔案 URL 使用 `encodeURIComponent` 進行百分號編碼，然後放在
+`/proxy/` 後：
+
+```text
+https://xget.xi-xu.me/proxy/https%3A%2F%2Fexample.com%2Ffile.zip
+```
+
+該功能僅支援 `GET` 和 `HEAD`。查詢字串必須包含在編碼後的目標 URL
+中。客戶端憑證不會被轉發，私有或保留網路目標與非標準連接埠會被拒絕，且每次重定向都會在跟隨前重新驗證。
+
 使用預部署實例 **`xget.xi-xu.me`**
 或您自己部署的實例，只需簡單替換網域並新增平台前綴：
 
