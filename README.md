@@ -339,6 +339,7 @@ instance, simply replace the domain and add the platform prefix:
 | Rust Crates            | `crates`        | `https://crates.io/...`                                              | `https://xget.xi-xu.me/crates/...`                                                |
 | Packagist              | `packagist`     | `https://repo.packagist.org/...`                                     | `https://xget.xi-xu.me/packagist/...`                                             |
 | Flathub                | `flathub`       | `https://dl.flathub.org/...`                                         | `https://xget.xi-xu.me/flathub/...`                                               |
+| NetBird                | `netbird`       | `https://pkgs.netbird.io/...`                                        | `https://xget.xi-xu.me/netbird/...`                                               |
 | Debian                 | `debian`        | `https://deb.debian.org/...`                                         | `https://xget.xi-xu.me/debian/...`                                                |
 | Ubuntu                 | `ubuntu`        | `https://archive.ubuntu.com/...`                                     | `https://xget.xi-xu.me/ubuntu/...`                                                |
 | Fedora                 | `fedora`        | `https://mirrors.kernel.org/fedora/...`                              | `https://xget.xi-xu.me/fedora/...`                                                |
@@ -1878,6 +1879,15 @@ echo "deb https://xget.xi-xu.me/ubuntu/ubuntu jammy main restricted universe mul
 echo "deb https://xget.xi-xu.me/ubuntu/ubuntu jammy-updates main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
 
 # Update package list
+sudo apt update
+```
+
+#### NetBird APT Configuration
+
+For an existing NetBird installation, replace the repository URL and keep the installed signing key. Replace `xget.example.com` with your deployed Xget domain.
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://xget.example.com/netbird/debian stable main" | sudo tee /etc/apt/sources.list.d/netbird.list
 sudo apt update
 ```
 

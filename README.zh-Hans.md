@@ -308,6 +308,7 @@ const proxied = `https://xget.xi-xu.me/proxy/${encodeURIComponent(source)}`;
 | Rust Crates   | `crates`    | `https://crates.io/...`                                             | `https://xget.xi-xu.me/crates/...`                                               |
 | Packagist     | `packagist` | `https://repo.packagist.org/...`                                    | `https://xget.xi-xu.me/packagist/...`                                            |
 | Flathub       | `flathub`   | `https://dl.flathub.org/...`                                        | `https://xget.xi-xu.me/flathub/...`                                              |
+| NetBird       | `netbird`   | `https://pkgs.netbird.io/...`                                       | `https://xget.xi-xu.me/netbird/...`                                              |
 | Debian        | `debian`    | `https://deb.debian.org/...`                                        | `https://xget.xi-xu.me/debian/...`                                               |
 | Ubuntu        | `ubuntu`    | `https://archive.ubuntu.com/...`                                    | `https://xget.xi-xu.me/ubuntu/...`                                               |
 | Fedora        | `fedora`    | `https://dl.fedoraproject.org/...`                                  | `https://xget.xi-xu.me/fedora/...`                                               |
@@ -1842,6 +1843,15 @@ echo "deb https://xget.xi-xu.me/ubuntu/ubuntu jammy main restricted universe mul
 echo "deb https://xget.xi-xu.me/ubuntu/ubuntu jammy-updates main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
 
 # 更新包列表
+sudo apt update
+```
+
+#### NetBird APT 配置
+
+如果已配置 NetBird 软件源，可替换仓库地址并保留现有签名密钥。请将 `xget.example.com` 替换为你部署的 Xget 域名。
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://xget.example.com/netbird/debian stable main" | sudo tee /etc/apt/sources.list.d/netbird.list
 sudo apt update
 ```
 

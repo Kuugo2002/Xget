@@ -53,6 +53,7 @@ export const PLATFORM_CATALOG = {
   crates: 'https://crates.io',
   packagist: 'https://repo.packagist.org',
   flathub: 'https://dl.flathub.org',
+  netbird: 'https://pkgs.netbird.io',
 
   // Linux Distributions
   debian: 'https://deb.debian.org',
