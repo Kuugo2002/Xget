@@ -28,6 +28,30 @@ describe('Worker regression coverage', () => {
     vi.restoreAllMocks();
   });
 
+  it('preserves GitLab rate limits without retrying or caching the response', async () => {
+    const fetchSpy = vi
+      .spyOn(globalThis, 'fetch')
+      .mockResolvedValue(new Response(null, { status: 429 }));
+
+    const response = await worker.fetch(
+      new Request('https://example.com/gl/gitlab-org/gitlab/-/raw/master/package.json', {
+        method: 'HEAD'
+      }),
+      {},
+      executionContext
+    );
+
+    expect(response.status).toBe(429);
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).toHaveBeenCalledWith(
+      'https://gitlab.com/gitlab-org/gitlab/-/raw/master/package.json',
+      expect.objectContaining({ method: 'HEAD' })
+    );
+    expect(cacheDefault.put).not.toHaveBeenCalled();
+    expect(response.headers.get('Strict-Transport-Security')).toBeTruthy();
+    expect(response.headers.get('X-Performance-Metrics')).toBeTruthy();
+  });
+
   it('does not leak thrown upstream error details to clients', async () => {
     vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('secret-upstream-detail'));
 

@@ -33,7 +33,8 @@ describe('Integration Tests', () => {
       const testUrl = 'https://example.com/gl/gitlab-org/gitlab/-/raw/master/package.json';
       const response = await SELF.fetch(testUrl, { method: 'HEAD' });
 
-      expect([200, 301, 302, 404]).toContain(response.status);
+      // GitLab may rate-limit shared CI runner IPs; the proxy preserves upstream 429s.
+      expect([200, 301, 302, 404, 429]).toContain(response.status);
       expect(response.headers.get('X-Performance-Metrics')).toBeTruthy();
     });
 
